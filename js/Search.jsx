@@ -4,7 +4,7 @@ import ShowCard from './ShowCard';
 
 class Search extends Component {
   state = {
-    searchTerm: ' '
+    searchTerm: ''
   };
   handleSearchTermChange = event => {
     this.setState({ searchTerm: event.target.value });
