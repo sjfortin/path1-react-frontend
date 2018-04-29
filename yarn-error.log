@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js test -- --no-cache
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js test
 
 PATH: 
   /Users/samfortin/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin
@@ -22,7 +22,8 @@ npm manifest:
       "lint": "eslint **/*.{js,jsx} --quiet",
       "watch": "webpack --watch",
       "dev": "webpack-dev-server",
-      "test": "NODE_ENV=test jest"
+      "test": "NODE_ENV=test jest",
+      "test:update": "NODE_ENV=test jest -u"
     },
     "dependencies": {
       "axios": "0.16.1",
@@ -48,6 +49,9 @@ npm manifest:
       "webpack": "2.6.1",
       "webpack-dev-middleware": "1.10.2",
       "webpack-hot-middleware": "2.18.0"
+    },
+    "jest": {
+      "snapshotSerializers": ["jest-serializer-enzyme"]
     },
     "devDependencies": {
       "babel-core": "6.24.1",
@@ -7165,7 +7169,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c NODE_ENV=test jest --no-cache
+  Arguments: -c NODE_ENV=test jest
   Directory: /Users/samfortin/Documents/dev/react/frontend-masters/complete-intro-to-react
   Output:
   
