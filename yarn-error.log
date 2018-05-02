@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js test
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js dev
 
 PATH: 
   /Users/samfortin/bin:/usr/local/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin
@@ -23,6 +23,7 @@ npm manifest:
       "watch": "webpack --watch",
       "dev": "webpack-dev-server",
       "test": "NODE_ENV=test jest",
+      "test:coverage": "jest  --coverage",
       "test:update": "NODE_ENV=test jest -u"
     },
     "dependencies": {
@@ -7169,7 +7170,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c NODE_ENV=test jest
+  Arguments: -c webpack-dev-server
   Directory: /Users/samfortin/Documents/dev/react/frontend-masters/complete-intro-to-react
   Output:
   
