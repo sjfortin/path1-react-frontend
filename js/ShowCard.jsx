@@ -15,7 +15,7 @@ const ImageWrapper = styled.img`
   float: left;
   margin-right: 10px;
   width: 50%;
-`
+`;
 
 const ShowCard = props => (
   <Wrapper>
