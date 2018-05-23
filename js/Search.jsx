@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import preload from '../data.json';
+import PropTypes from 'prop-types';
 import ShowCard from './ShowCard';
 
 class Search extends Component {
@@ -21,12 +21,33 @@ class Search extends Component {
             placeholder="Search"
           />
         </header>
-        <div>{preload.shows
-          .filter(show => `${show.title} ${show.description}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0 )
-          .map(show => <ShowCard key={show.imdbID} {...show} />)}</div>
+        <div>
+          {this.props.shows
+            .filter(
+              show =>
+                `${show.title} ${show.description}`.toUpperCase().indexOf(this.state.searchTerm.toUpperCase()) >= 0
+            )
+            .map(show => <ShowCard key={show.imdbID} {...show} />)}
+        </div>
       </div>
     );
   }
 }
+
+Search.propTypes = {
+  shows: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+};
+Search.defaultProps = {
+  shows: [
+    {
+      title: null,
+      description: null,
+      year: null,
+      imdbID: null,
+      poster: null,
+      trailer: null
+    }
+  ]
+};
 
 export default Search;
