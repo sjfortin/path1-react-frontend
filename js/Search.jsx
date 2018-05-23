@@ -35,7 +35,7 @@ class Search extends Component {
 }
 
 Search.propTypes = {
-  shows: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  shows: PropTypes.oneOfType([PropTypes.string])
 };
 Search.defaultProps = {
   shows: [
