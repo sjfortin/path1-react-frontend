@@ -1,6 +1,7 @@
+// @flow
+
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import Landing from './Landing';
 import Search from './Search';
 import Details from './Details';
@@ -26,13 +27,5 @@ const App = () => (
     </div>
   </BrowserRouter>
 );
-
-App.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.string.isRequired
-    })
-  })
-};
 
 export default App;

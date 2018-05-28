@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Header from './Header'
 
 const Details = props => {
@@ -23,31 +22,6 @@ const Details = props => {
       </div>
     </div>
   );
-};
-
-Details.propTypes = {
-  show: PropTypes.shape([
-    {
-      title: PropTypes.string,
-      description: PropTypes.string,
-      year: PropTypes.string,
-      imdbID: PropTypes.string,
-      poster: PropTypes.string,
-      trailer: PropTypes.string
-    }
-  ])
-};
-Details.defaultProps = {
-  show: [
-    {
-      title: null,
-      description: null,
-      year: null,
-      imdbID: null,
-      poster: null,
-      trailer: null
-    }
-  ]
 };
 
 export default Details;

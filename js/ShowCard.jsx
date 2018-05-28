@@ -1,5 +1,6 @@
+// @flow
+
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -17,7 +18,7 @@ const ImageWrapper = styled.img`
   width: 50%;
 `;
 
-const ShowCard = props => (
+const ShowCard = (props: { poster: string, title: string, year: string, description: string }) => (
   <Wrapper>
     <ImageWrapper src={`/public/img/posters/${props.poster}`} alt={`${props.title} Show Poster`} />
     <div>
@@ -27,12 +28,5 @@ const ShowCard = props => (
     </div>
   </Wrapper>
 );
-
-ShowCard.propTypes = {
-  poster: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  year: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
-};
 
 export default ShowCard;

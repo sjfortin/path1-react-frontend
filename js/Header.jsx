@@ -22,12 +22,4 @@ const Header = props => {
   );
 };
 
-Header.propTypes = {
-  showSearch.boolean
-}
-
-Header.defaultProps = {
-  showSearch: false
-}
-
 export default Header;

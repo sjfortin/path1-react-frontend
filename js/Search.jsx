@@ -1,12 +1,13 @@
+// @flow
+
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import ShowCard from './ShowCard';
 
 class Search extends Component {
   state = {
     searchTerm: ''
   };
-  handleSearchTermChange = event => {
+  handleSearchTermChange = (event: SyntheticKeyboardEvent & { target: HTMLInputElement }) => {
     this.setState({ searchTerm: event.target.value });
   };
   render() {
@@ -33,28 +34,5 @@ class Search extends Component {
     );
   }
 }
-
-Search.propTypes = {
-  shows: PropTypes.shape([{
-    title: PropTypes.string,
-    description: PropTypes.string,
-    year: PropTypes.string,
-    imdbID: PropTypes.string,
-    poster: PropTypes.string,
-    trailer: PropTypes.string
-  }])
-};
-Search.defaultProps = {
-  shows: [
-    {
-      title: null,
-      description: null,
-      year: null,
-      imdbID: null,
-      poster: null,
-      trailer: null
-    }
-  ]
-};
 
 export default Search;
