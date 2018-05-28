@@ -27,7 +27,16 @@ const Details = props => {
 };
 
 Details.propTypes = {
-  show: PropTypes.oneOfType([PropTypes.string])
+  show: PropTypes.shape([
+    {
+      title: PropTypes.string,
+      description: PropTypes.string,
+      year: PropTypes.string,
+      imdbID: PropTypes.string,
+      poster: PropTypes.string,
+      trailer: PropTypes.string
+    }
+  ])
 };
 Details.defaultProps = {
   show: [

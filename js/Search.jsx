@@ -35,7 +35,14 @@ class Search extends Component {
 }
 
 Search.propTypes = {
-  shows: PropTypes.oneOfType([PropTypes.string])
+  shows: PropTypes.shape([{
+    title: PropTypes.string,
+    description: PropTypes.string,
+    year: PropTypes.string,
+    imdbID: PropTypes.string,
+    poster: PropTypes.string,
+    trailer: PropTypes.string
+  }])
 };
 Search.defaultProps = {
   shows: [
