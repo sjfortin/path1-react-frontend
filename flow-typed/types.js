@@ -3,8 +3,8 @@
 export type Show = {
   title: string,
   description: string,
-  imdbID: string,
   year: string,
+  imdbID: string,
   trailer: string,
   poster: string
 };

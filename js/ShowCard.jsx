@@ -18,13 +18,13 @@ const ImageWrapper = styled.img`
   width: 50%;
 `;
 
-const ShowCard = (props: { poster: string, title: string, year: string, description: string }) => (
+const ShowCard = (props: { poster: string, title: string, year: string, description: string, imdbID: string }) => (
   <Wrapper>
     <ImageWrapper src={`/public/img/posters/${props.poster}`} alt={`${props.title} Show Poster`} />
     <div>
       <h3>{props.title}</h3>
       <h4>({props.year})</h4>
-      <p>{props.description}</p>
+      <p>{props.description} <span style={{ fontSize: '12px' }}>{props.imdbID}</span></p>
     </div>
   </Wrapper>
 );
