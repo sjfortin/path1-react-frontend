@@ -1,6 +1,6 @@
 {
-  "extends": ["plugin:flowtype/recommended", "airbnb", "prettier", "prettier/react"],
-  "plugins": ["flowtype", "prettier"],
+  "extends": ["plugin:flowtype/recommended", "plugin:react/recommended", "airbnb", "prettier", "prettier/react"],
+  "plugins": ["flowtype", "prettier", "react"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2016,
@@ -10,7 +10,8 @@
     }
   },
   "rules": {
-    "react/forbid-prop-types": 0
+    "react/forbid-prop-types": 0,
+    "flowtype/no-types-missing-file-annotation": 0
   },
   "env": {
     "es6": true,

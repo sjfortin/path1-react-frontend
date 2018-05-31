@@ -1,10 +1,19 @@
+// @flow
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = props => {
+const Header = (props: { showSearch?: boolean, handleSearchTermChange?: Function, searchTerm?: string }) => {
   let utilSpace;
   if (props.showSearch) {
-    utilSpace = <h1>fasd</h1>;
+    utilSpace = (
+      <input
+        onChange={props.handleSearchTermChange}
+        value={props.searchTerm}
+        type="text"
+        placeholder="Search"
+      />
+    )
   } else {
     utilSpace = (
       <h2>
@@ -17,9 +26,15 @@ const Header = props => {
       <h1>
         <Link to="/">svideo</Link>
       </h1>
-      <utilSpace />
+      {utilSpace}
     </header>
   );
+};
+
+Header.defaultProps = {
+  showSearch: false,
+  handleSearchTermChange: function noop() {},
+  searchTerm: ''
 };
 
 export default Header;

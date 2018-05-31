@@ -1,7 +1,9 @@
-import React from 'react';
-import Header from './Header'
+// @flow
 
-const Details = props => {
+import React from 'react';
+import Header from './Header';
+
+const Details = (props: { show: Show }) => {
   const { title, year, description, poster, trailer } = props.show;
   return (
     <div className="details">
